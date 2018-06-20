@@ -22,7 +22,7 @@ class Streamydoo extends EventEmitter {
   constructor (url, opts = {}) {
     super()
 
-    this.opts = { ...defaultOptions, ...opts }
+    this.opts = Object.assign({}, defaultOptions, opts)
     this.url = url
     this.xhr = new XMLHttpRequest()
     this.seenBytes = 0
