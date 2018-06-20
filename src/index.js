@@ -72,10 +72,10 @@ class Streamydoo extends EventEmitter {
    * @param {any} [data]
    */
   send (data) {
-    if (typeof data === 'object' &&
-      (this.opts.headers.hasOwnProperty('Content-Type') ||
-      this.opts.headers.hasOwnProperty('content-type'))) {
-      this.xhr.setRequestHeader('Content-Type', 'application/json')
+    if (typeof data === 'object') {
+      if (!this.opts.headers.hasOwnProperty('Content-Type') && !this.opts.headers.hasOwnProperty('content-type')) {
+        this.xhr.setRequestHeader('Content-Type', 'application/json')
+      }
       this.xhr.send(JSON.stringify(data))
     } else {
       this.xhr.send(data)
