@@ -5,7 +5,7 @@
   "main": "dist/main.js",
   "scripts": {
     "dev": "webpack --mode development",
-    "prepublish": "webpack --mode production",
+    "prepare": "webpack --mode production",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
