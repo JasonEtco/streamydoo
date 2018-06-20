@@ -3,7 +3,7 @@
 </p>
 <p align="center">Easy to use stream request handler for your browser<p>
 <p align="center">
-  <a href="https://npmjs.org/packages/streamydoo"><img src="https://img.shields.io/npm/v/streamydoo.svg" alt="npm package" /></a>
+  <a href="https://npmjs.org/package/streamydoo"><img src="https://img.shields.io/npm/v/streamydoo.svg" alt="npm package" /></a>
 </p>
 
 ## Usage
