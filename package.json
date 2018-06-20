@@ -1,0 +1,43 @@
+{
+  "name": "streamydoo",
+  "version": "0.0.1-beta",
+  "description": "Easy streaming module",
+  "main": "dist/main.js",
+  "scripts": {
+    "dev": "webpack --mode development",
+    "prepublish": "webpack --mode production",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JasonEtco/streamydoo.git"
+  },
+  "keywords": [
+    "streams",
+    "xhr",
+    "chunks",
+    "doo"
+  ],
+  "author": "Jason Etcovitch <jasonetco@github.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JasonEtco/streamydoo/issues"
+  },
+  "homepage": "https://github.com/JasonEtco/streamydoo#readme",
+  "standard": {
+    "env": [
+      "browser"
+    ],
+    "ignorePaths": [
+      "./dist"
+    ]
+  },
+  "dependencies": {
+    "events": "^3.0.0"
+  },
+  "devDependencies": {
+    "standard": "^11.0.1",
+    "webpack": "^4.12.0",
+    "webpack-cli": "^3.0.8"
+  }
+}
