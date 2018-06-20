@@ -53,7 +53,11 @@ class Streamydoo extends EventEmitter {
       // "Loading" with partial data, so a chunk
       if (readyState === 3) {
         // Just get the new stuff
-        const newData = this.xhr.responseText.substr(this.seenBytes)
+        let newData = this.xhr.responseText.substr(this.seenBytes)
+
+        try {
+          newData = JSON.parse(newData)
+        } catch (e) {}
 
         // Emit the data event
         this.emit('data', newData)
@@ -62,7 +66,14 @@ class Streamydoo extends EventEmitter {
         this.seenBytes = this.xhr.responseText.length
       } else if (readyState === 4) {
         // Request is done!
-        this.emit('end', this.xhr.response)
+        // Just get the new stuff
+        let newData = this.xhr.responseText.substr(this.seenBytes)
+
+        try {
+          newData = JSON.parse(newData)
+        } catch (e) {}
+
+        this.emit('end', newData)
       }
     }
   }
