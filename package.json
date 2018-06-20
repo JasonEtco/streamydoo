@@ -4,7 +4,7 @@
   "description": "Easy streaming module",
   "main": "dist/main.js",
   "scripts": {
-    "dev": "webpack --mode development",
+    "dev": "webpack -w --mode development",
     "prepare": "webpack --mode production",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
